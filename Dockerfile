@@ -22,3 +22,5 @@ EXPOSE 8000
 
 # Set the handler as the entry point
 CMD ["python3", "handler.py"]
+
+#test
