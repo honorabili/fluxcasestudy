@@ -15,7 +15,8 @@ ENV MODEL_DIR=/app/model
 RUN mkdir -p $MODEL_DIR
 
 # Download the Stable Diffusion model (no authentication needed)
-RUN huggingface-cli download black-forest-labs/FLUX.1-dev --local-dir $MODEL_DIR --local-dir-use-symlinks False
+RUN huggingface-cli download black-forest-labs/FLUX.1-dev --local-dir $MODEL_DIR --local-dir-use-symlinks False --TOKEN $HF_TOKEN
+# added token tag last
 
 # Expose the port (if required by RunPod)
 EXPOSE 8000
