@@ -12,7 +12,7 @@ RUN pip install torch diffusers runpod transformers accelerate huggingface_hub
 
 # Needed for Authentication
 ARG HF_TOKEN
-ENV HF_TOKEN="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"
+ENV HF_TOKEN=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
 
 # Set environment variables
 ENV MODEL_DIR=/app/model
