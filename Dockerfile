@@ -12,10 +12,10 @@ RUN pip install torch diffusers runpod transformers accelerate huggingface_hub
 
 # Set environment variables
 ENV MODEL_DIR=/app/model
-RUN mkdir -p $WORKFOLDER
+RUN mkdir -p $MODEL_DIR
 
 # Download the Stable Diffusion model (no authentication needed)
-RUN huggingface-cli download black-forest-labs/FLUX.1-dev --local-dir $WORKFOLDER --local-dir-use-symlinks False
+RUN huggingface-cli download black-forest-labs/FLUX.1-dev --local-dir $MODEL_DIR --local-dir-use-symlinks False
 
 # Expose the port (if required by RunPod)
 EXPOSE 8000
