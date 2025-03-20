@@ -5,6 +5,10 @@ from diffusers import StableDiffusionPipeline, EulerDiscreteScheduler
 import base64
 import torch
 from transformers import AutoModel
+import os
+
+hf_token = os.getenv('HF_TOKEN')  # This fetches the token from the environment variable
+
 
 model_id = "black-forest-labs/FLUX.1-dev"
 MODEL_PATH = "/app/model"
