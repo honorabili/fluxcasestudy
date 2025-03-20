@@ -15,7 +15,6 @@ ENV MODEL_DIR=/app/model
 RUN mkdir -p $MODEL_DIR
 
 # Download the Stable Diffusion model (no authentication needed)
-RUN huggingface-cli login(token="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")
 RUN huggingface-cli download black-forest-labs/FLUX.1-dev --local-dir $MODEL_DIR --local-dir-use-symlinks False
 # token added in runpod cli preconfig
 
