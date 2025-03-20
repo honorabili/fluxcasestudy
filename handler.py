@@ -4,11 +4,12 @@ from diffusers import StableDiffusionPipeline, EulerDiscreteScheduler
 import base64
 import torch
 from transformers import AutoModel
+login(token="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")
 
 model_id = "black-forest-labs/FLUX.1-dev"
 MODEL_PATH = "/app/model"
 model_name = "black-forest-labs/FLUX.1-dev"
-hf_token = "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"  # Token will need to be updated if it refreshes
+# Token will need to be updated if it refreshes
 model = AutoModel.from_pretrained(model_name, use_auth_token=hf_token)
 
 
