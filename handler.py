@@ -14,7 +14,7 @@ model_id = "black-forest-labs/FLUX.1-dev"
 MODEL_PATH = "/app/model"
 model_name = "black-forest-labs/FLUX.1-dev"
 # Token will need to be updated if it refreshes
-model = AutoModel.from_pretrained(model_name, use_auth_token=hf_token)
+model = AutoModel.from_pretrained(model_name, token=hf_token)
 
 
 # Load the pre-downloaded model
