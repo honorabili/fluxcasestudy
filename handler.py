@@ -6,6 +6,7 @@ import base64
 import torch
 from transformers import AutoModel
 import os
+import starcoder2
 
 hf_token = os.getenv('HF_TOKEN')  # This fetches the token from the environment variable
 
