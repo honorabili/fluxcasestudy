@@ -7,6 +7,8 @@ import torch
 from transformers import AutoModel
 import os
 import starcoder2
+from transformers import PreTrainedModel, PretrainedConfig
+# You might need a custom config and model class here
 
 hf_token = os.getenv('HF_TOKEN')  # This fetches the token from the environment variable
 
